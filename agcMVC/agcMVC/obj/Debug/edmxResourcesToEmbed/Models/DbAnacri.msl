@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="anacriModelStoreContainer" CdmEntityContainer="anacriEntities">
+    <EntitySetMapping Name="analise">
+      <EntityTypeMapping TypeName="anacriModel.analise">
+        <MappingFragment StoreEntitySet="analise">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="client_id" ColumnName="client_id" />
+          <ScalarProperty Name="date_emissao" ColumnName="date_emissao" />
+          <ScalarProperty Name="date_retorno" ColumnName="date_retorno" />
+          <ScalarProperty Name="date_entrega" ColumnName="date_entrega" />
+          <ScalarProperty Name="prod_id" ColumnName="prod_id" />
+          <ScalarProperty Name="prod_desc" ColumnName="prod_desc" />
+          <ScalarProperty Name="pcp_captec" ColumnName="pcp_captec" />
+          <ScalarProperty Name="pcp_captec_obs" ColumnName="pcp_captec_obs" />
+          <ScalarProperty Name="pcp_capope" ColumnName="pcp_capope" />
+          <ScalarProperty Name="pcp_capope_obs" ColumnName="pcp_capope_obs" />
+          <ScalarProperty Name="pcp_proj" ColumnName="pcp_proj" />
+          <ScalarProperty Name="pcp_proj_obs" ColumnName="pcp_proj_obs" />
+          <ScalarProperty Name="conclusao" ColumnName="conclusao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

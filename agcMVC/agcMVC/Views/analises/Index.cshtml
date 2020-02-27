@@ -1,0 +1,105 @@
+﻿@model IEnumerable<agcMVC.Models.analise>
+
+@{
+    ViewBag.Title = "Análises Crítica";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Criar Nova", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.client_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_emissao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_retorno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_entrega)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prod_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prod_desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pcp_captec)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pcp_captec_obs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pcp_capope)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pcp_capope_obs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pcp_proj)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pcp_proj_obs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.conclusao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.client_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_emissao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_retorno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_entrega)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prod_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prod_desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pcp_captec)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pcp_captec_obs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pcp_capope)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pcp_capope_obs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pcp_proj)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pcp_proj_obs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.conclusao)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="anacriModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="analise">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="client_id" Type="int" />
+    <Property Name="date_emissao" Type="date" />
+    <Property Name="date_retorno" Type="date" />
+    <Property Name="date_entrega" Type="date" />
+    <Property Name="prod_id" Type="varchar" MaxLength="100" />
+    <Property Name="prod_desc" Type="varchar" MaxLength="100" />
+    <Property Name="pcp_captec" Type="bit" />
+    <Property Name="pcp_captec_obs" Type="varchar" MaxLength="4096" />
+    <Property Name="pcp_capope" Type="bit" />
+    <Property Name="pcp_capope_obs" Type="varchar" MaxLength="4096" />
+    <Property Name="pcp_proj" Type="bit" />
+    <Property Name="pcp_proj_obs" Type="varchar" MaxLength="4096" />
+    <Property Name="conclusao" Type="varchar" MaxLength="4096" />
+  </EntityType>
+  <EntityContainer Name="anacriModelStoreContainer">
+    <EntitySet Name="analise" EntityType="Self.analise" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

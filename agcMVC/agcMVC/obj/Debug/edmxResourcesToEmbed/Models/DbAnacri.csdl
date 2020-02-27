@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="anacriModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="analise">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="client_id" Type="Int32" />
+    <Property Name="date_emissao" Type="DateTime" Precision="0" />
+    <Property Name="date_retorno" Type="DateTime" Precision="0" />
+    <Property Name="date_entrega" Type="DateTime" Precision="0" />
+    <Property Name="prod_id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="prod_desc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="pcp_captec" Type="Boolean" />
+    <Property Name="pcp_captec_obs" Type="String" MaxLength="4096" FixedLength="false" Unicode="false" />
+    <Property Name="pcp_capope" Type="Boolean" />
+    <Property Name="pcp_capope_obs" Type="String" MaxLength="4096" FixedLength="false" Unicode="false" />
+    <Property Name="pcp_proj" Type="Boolean" />
+    <Property Name="pcp_proj_obs" Type="String" MaxLength="4096" FixedLength="false" Unicode="false" />
+    <Property Name="conclusao" Type="String" MaxLength="4096" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="anacriEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="analise" EntityType="Self.analise" />
+  </EntityContainer>
+</Schema>
